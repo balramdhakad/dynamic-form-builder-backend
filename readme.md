@@ -1,4 +1,4 @@
-# Form System — Setup Guide
+# Form System - Setup Guide
 
 Before you start, make sure you have **Node.js 20+**, **Docker Desktop**, and **Git** installed on your machine.
 
