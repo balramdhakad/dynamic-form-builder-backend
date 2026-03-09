@@ -31,7 +31,7 @@ const findUserByEmail = async (email) => {
 };
 const findUserById = async (userId) => {
   const query = `
-    SELECT id, username, email,is_block,role
+    SELECT id, username, email,role
     FROM users
     WHERE id = $1
     LIMIT 1
