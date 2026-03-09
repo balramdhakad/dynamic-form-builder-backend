@@ -5,13 +5,15 @@ Before you start, make sure you have **Node.js 20+**, **Docker Desktop**, and **
 ## 1. Clone the repo
 
 ```bash
-git clone <your-repository-url>
-cd form-system
+git clone https://github.com/balramdhakad/dynamic-form-builder-backend
+cd dynamic-form-builder-backend
 ```
 
 ## 2. Create your `.env` file
 
 Create a `.env` file in the root of the project and paste this in, changing the password and JWT secret to something only you know:
+
+## note - take .env.sample as reference
 
 ```env
 PORT=8080
@@ -22,13 +24,18 @@ POSTGRES_PASSWORD=admin123
 POSTGRES_DB=form_system
 POSTGRES_PORT=5432
 DATABASE_URL=postgresql://admin:admin123@localhost:5432/form_system
+
 REDIS_HOST=localhost
 REDIS_PORT=6379
 
 
-JWT_SECRET=a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2w3x4y5z6a7b8c9d0e1f2
+JWT_SECRET=your_secret
 JWT_EXPIRY=1d
 ```
+<!-- create DATABASE_URL from values like POSTGRES_USER, POSTGRES_PASSWORD, POSTGRES_DB, POSTGRES_PORT 
+`postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@localhost:${POSTGRES_PORT}/
+${POSTGRES_DB}`
+-->
 
 ## 3. Start the database
 
